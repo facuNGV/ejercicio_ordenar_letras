@@ -39,6 +39,27 @@ while len(lista_objetivo) != 0:
   pre_resultado.append(min_caracter)
   lista_objetivo.remove(min_caracter)
 
+#lista de minusculas
+for minusc in pre_resultado:
+  minusc_int = False
+  for j in range(10):
+    j = str(j)
+    if minusc == j:
+      minusc_int = True
+  if minusc_int == False:
+    if minusc.islower() == True:
+      lista_minusculas.append(minusc)
+
+#lista de mayusculas
+for may in pre_resultado:
+  may_int = False
+  for j in range(10):
+    j = str(j)
+    if may == j:
+      may_int = True
+  if may_int == False:
+    if may.isupper() == True:
+      lista_mayusculas.append(may)
 
 
 

@@ -30,7 +30,7 @@ lista_pares = []
 for i in objetivo:
     lista_objetivo.append(i)
 
-#ordena caracteres de menor a mayor
+#Guardar en pre_resultado las letras ordenadas de menor a mayor 
 while len(lista_objetivo) != 0:
   min_caracter = "}"
   for i in lista_objetivo:
@@ -62,7 +62,35 @@ for may in pre_resultado:
       lista_mayusculas.append(may)
 
 
+#lista de impares
+for i in pre_resultado:
+  es_par = False
+  for j in range(10):
+    j = str(j)
+    if i == j:
+      i = int(i)
+      if i % 2 == 0:
+        es_par = True
+      elif es_par == False:
+        i = str(i)
+        lista_impares.append(i)
 
+#lista de pares
+for i in pre_resultado:
+  for j in range(10):
+    j = str(j)
+    if i == j:
+      i = int(i)
+      if i % 2 == 0:
+        i = str(i)
+        lista_pares.append(i)
+
+unir_lista = lista_minusculas + lista_mayusculas + lista_impares + lista_pares
+
+for i in unir_lista:
+    resultado += i
+
+print(resultado)
 
 
 
